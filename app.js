@@ -2,13 +2,15 @@ const express = require('express');
 
 const app = express();
 
-const PORT = 3000;
-
 app.use(express.static('public'));
 
-app.listen(3000, ()=>{
+//Levantar nuestro servidor
+const PORT = process.env.PORT || 3000;
+app.listen(port,()=>console.log('Servidor corriendo en el puerto ${port}'));
+
+/*app.listen(3000, ()=>{
     console.log('Servidor funcionando en el puerto' + PORT);
-});
+});*/
 
 app.get('/', (req,res)=>{
     res.sendFile(__dirname + '/views/home.html');
