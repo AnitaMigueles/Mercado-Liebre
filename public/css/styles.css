@@ -52,7 +52,7 @@ div.top-header{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    padding: 5%;
+    align-items:center;
 }
 
 header a{
@@ -61,11 +61,10 @@ header a{
 
 .logo{
     width: 100%; 
-    padding: 10px;
 }
 
 header .form input{
-    width: 50%;
+    width: 45%;
 }
 
 header .form{
@@ -89,7 +88,7 @@ header .form input[type="search"]{
     outline: none;
     color: var(--gris-oscuro);
     padding-left: 10px;
-    width: 150px;
+    width: 95px;
 }
 
 header .form .icon{
@@ -99,7 +98,7 @@ header .form .icon{
     width: 18px;
     padding-top: 5px;
     position: absolute;
-    left: 145px;
+    left: 90px;
     justify-self: flex-end;
 }
 
@@ -374,7 +373,7 @@ input:invalid + .mensaje-error{
 
 
 /*CELULARES*/
-@media (min-width: 360px){
+@media (min-width: 217px){
     main section article .description{
         display: none;
     }
@@ -387,6 +386,129 @@ input:invalid + .mensaje-error{
 }
 
 /*TABLETS*/
+@media (min-width: 361px){
+    main section div.products article{
+        width: 22%;
+    } 
+    
+    /*HEADER*/
+    header a{
+        width: 30%;
+    }
+
+    header .form .icon, #search{
+        border: 1px solid var(--negro);
+        border-radius: 0px;
+    }
+
+    #search{
+        width: 100%;
+        padding-right: 0px;
+        font-size: 16px;        
+    }
+
+    header .form .icon{
+        display: flex;
+        position: static;
+        width: 25px;
+        margin: 2px;
+        padding-left: 2px;
+        padding-bottom: 3px;
+    }
+
+    .form{
+        align-self: center;
+        width: 25%;
+    }
+
+    .texto-compra-cuotas{
+        margin: 0px;
+        width: 40%;
+        font-size: 12px;
+        align-self: center;
+    }
+
+    header div.top-header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header nav.oculto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 10px;
+        padding: 20px;
+    }
+
+    header div.links, header div.links ul{    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        
+    }
+
+    header div.links{
+        justify-items: space-between;
+        align-items: center;
+    }
+
+    .flex-end, .flex-start{
+        justify-content: space-around;
+        flex-flow: row wrap;
+        width: 45%;
+    }
+        
+    header nav.oculto ul li{
+        list-style-type: none;
+    }
+        
+    header nav.oculto ul li a{
+        text-decoration: none;
+        color: var(--negro);
+    }  
+
+    header div.burger-menu{
+        display: none;
+    }
+
+
+    /*MAIN*/
+    .article:hover .description{
+        display: block;
+        margin-top: 20px;
+    }
+    
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: start;
+    }
+    
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price, .discount{
+        margin-right: 70px;
+    }
+
+
+    /*LOGIN - FORMULARIO*/
+    .login form input{
+        font-size: 14px;
+    }
+}
+
+
+/*COMPUTADORAS*/
 @media (min-width: 769px){
     main section div.products article{
         width: 22%;
@@ -429,68 +551,18 @@ input:invalid + .mensaje-error{
     .texto-compra-cuotas{
         margin: 0px;
         width: 33%;
+        font-size: 14px;
+        align-self: center;
     }
 
     header div.top-header{
         display: flex;
         justify-content: space-between;
     }
-
-    .texto-compra-cuotas{
-        font-size: 80%;
-        align-self: center;
-    }
-
-    header div.links,
-    header div.links ul,
-    header div.links ul li{
-        display: flex;
-    }
-
-    header div.links{
-        justify-items: space-between;
-        align-items: center;
-    }
-
-    header nav.oculto{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        font-size: 90%;
-        margin-left: 20px;
-        padding-bottom: 20px;
-    }
     
-    .flex-start, .flex-end{
-        justify-content: space-evenly;
-        flex-flow: row wrap;
-        min-width: 40%;
-
+    header nav.oculto{
+        font-size: 14px;
     }
-
-    .flex-end{
-        padding-left: 50px;
-    }
-
-    .flex-start li{
-       align-items: center;
-    }
-
-    .flex-end li{
-        align-items: center;
-        margin-right: 10px;
-
-    }
-        
-    header nav.oculto ul li{
-        list-style-type: none;
-    }
-        
-    header nav.oculto ul li a{
-        text-decoration: none;
-        color: var(--negro);
-    }  
 
     header div.burger-menu{
         display: none;
@@ -523,154 +595,5 @@ input:invalid + .mensaje-error{
     /*LOGIN - FORMULARIO*/
     .login form input{
         font-size: 16px;
-    }
-}
-
-
-/*COMPUTADORAS*/
-@media (min-width: 1023px){
-
-    main section div.products article{
-        width: 22%;
-    } 
-    
-    /*HEADER*/
-    header .form .icon, #search{
-        border: 1px solid var(--negro);
-        border-radius: 0px;
-    }
-
-    #search{
-        width: 100%;
-        padding-right: 0px;
-        font-size: 16px;        
-    }
-
-    header .form .icon{
-        display: flex;
-        position: static;
-        width: 25px;
-        margin: 2px;
-        padding-left: 2px;
-        padding-bottom: 3px;
-    }
-
-    .form{
-        min-width: 30%;
-        align-self: center;
-    }
-
-    header a{
-        width: 33%;
-    }
-
-    .logo{
-        width: 100%;
-    }
-
-    .texto-compra-cuotas {
-        margin: 0px;
-        width: 33%;
-    }
-
-    header div.top-header{
-        display: flex;
-        justify-content: space-between;
-    }
-
-
-    header div.top-header p.texto-compra-cuotas{
-        font-size: 90%;
-        align-self: center;
-    }
-
-    header div.links,
-    header div.links ul,
-    header div.links ul li{
-        display: flex;
-    }
-
-    header div.links{
-        justify-items: space-between;
-        align-items: center;
-    }
-
-    header nav.oculto{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        font-size: 90%;
-        margin-left: 20px;
-        padding-bottom: 20px;
-    }
-    
-    .flex-start, .flex-end{
-        justify-content: space-evenly;
-        flex-flow: row wrap;
-        min-width: 40%;
-
-    }
-
-    .flex-end{
-        padding-left: 50px;
-    }
-
-    .flex-start li{
-       align-items: center;
-    }
-
-    .flex-end li{
-        align-items: center;
-        margin-right: 10px;
-
-    }
-        
-    header nav.oculto ul li{
-        list-style-type: none;
-    }
-        
-    header nav.oculto ul li a{
-        text-decoration: none;
-        color: var(--negro);
-        width: 25%;
-    }  
-
-    header div.burger-menu{
-        display: none;
-    }
-
-    .article:hover .description{
-        display: block;
-        margin-top: 20px;
-    }
-
-    /*LOGIN - FORMULARIO*/
-    .login form input{
-        font-size: 16px;
-    }
-
-    .login form{
-        margin:50px 0px 25%;
-    }
-
-
-    /*FOOTER*/
-    .footer{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-content: center;
-        justify-content: space-between;
-    }
-
-    #div1, #div2, #div3{
-        width: 33%;
-    }
-    
-    #div4 .Copyright{
-        width: 100%;
-        margin-bottom: 10px;
-        color: var(--gris-oscuro);
     }
 }

@@ -8,8 +8,9 @@ app.use(express.static('public'));
 const port = process.env.PORT || 3000;
 app.listen(port,()=>console.log('Servidor corriendo en el puerto ${port}'));
 
+
 /*app.listen(3000, ()=>{
-    console.log('Servidor funcionando en el puerto' + PORT);
+    console.log('Servidor funcionando en el puerto' + 3000);
 });*/
 
 app.get('/', (req,res)=>{
