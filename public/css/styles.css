@@ -578,17 +578,36 @@ input:invalid + .mensaje-error{
     main section div.products{
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: space-between;
         align-items: start;
     }
     
     main section div.products article{
-        width: 45%;
+        width: 22%;
     }
 
     .price, .discount{
         margin-right: 70px;
+    }
+
+    /*FOOTER*/
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    #div1, #div2, #div3{
+        width: 33%;
+    }
+    
+    #div4 .Copyright{
+        width: 100%;
+        margin-bottom: 10px;
+        color: var(--gris-oscuro);
     }
 
 
